@@ -1,0 +1,119 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --bg: #0f172a;          /* dark blue background */
+  --card-bg: #111827;    /* card background */
+  --text: #e5e7eb;       /* main text */
+  --muted: #9ca3af;      /* secondary text */
+  --primary: #6366f1;    /* indigo */
+  --primary-hover: #4f46e5;
+  --border: #1f2933;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+.app {
+  width: 90%;
+  max-width: 420px;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --border: #e5e7eb;
+  }
+
+  body {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  }
+}
