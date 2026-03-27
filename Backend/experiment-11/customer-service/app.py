@@ -3,6 +3,11 @@ import requests
 
 app = Flask(__name__)
 
+# ✅ ADD THIS HERE
+@app.route('/')
+def home():
+    return "Customer Service is running 🚀"
+
 customers = {
     1: {"name": "Shubham", "orders": [101, 102]},
     2: {"name": "Rahul", "orders": [103]}
@@ -27,6 +32,5 @@ def get_customer_orders(customer_id):
         "orders": orders_data
     })
 
-# ✅ CHANGE IS HERE (ONLY THIS PART)
 if __name__ == "__main__":
     app.run()
